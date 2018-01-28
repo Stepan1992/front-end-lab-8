@@ -1,0 +1,129 @@
+/* 
+
+please don't edit this styles
+
+*/
+
+
+a:focus{color:#666;outline:0}ul{padding:0;margin:0}body{background-color:#f2f2f2;color:#000;font-family:'Open Sans',Helvetica,Arial,sans-serif;font-size:16px;font-weight:300;padding-top:30px;overflow-x:hidden}.box,.tm-content-box,.tm-main-nav{background-color:#fff}.tm-sidebar{position:fixed;width:360px}.tm-main-nav{font-size:1.6667em;padding-top:15px;padding-bottom:10px;text-align:center}.tm-nav-item{list-style:none;width:100%;padding:15px 30px}.tm-nav-item-link{border:1px solid transparent;color:#666;display:block;padding:10px;width:100%;-webkit-transition:all .3s ease;transition:all .3s ease}.carousel-indicators li,.tm-banner-inner{border:1px solid #999}.flex-2-col,.tm-banner-inner{display:-webkit-box;display:-ms-flexbox}.tm-nav-item-link.active,.tm-nav-item-link:hover{color:#666;text-decoration:none;border:1px solid #999}.tm-nav-item-link:focus{text-decoration:none}.tm-banner-text,.tm-banner-title,.tm-section-title{color:#666;font-weight:300;margin-top:0}.tm-section-title{margin-bottom:20px}.tm-section-title-box{margin-bottom:0}.tm-banner-title{font-size:3.3em;letter-spacing:2px;text-transform:uppercase}.tm-main-content{margin-left:360px;padding-left:30px}.tm-content-box{margin-bottom:30px}.pad{padding:50px}.tm-banner{height:370px;padding:30px}.tm-banner-inner{height:100%;text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.tm-banner-text{font-size:1.4em}.flex-2-col{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.boxes,.tm-box-bg-title{display:-webkit-box;display:-ms-flexbox}.flex-item{-webkit-box-flex:0 1 auto;-ms-flex:0 1 auto;flex:0 1 auto}.section-description{line-height:1.8;margin-bottom:25px}.section-description:last-child{margin-bottom:0}.tm-team-description-container{max-width:500px}.box{list-style:none;width:33.3333%;height:auto}.box-bg{position:relative}.tm-box-bg-title{position:absolute;top:0;right:0;bottom:0;left:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.boxes{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}.gallery-container a{cursor:-webkit-zoom-in;cursor:zoom-in}.carousel{position:relative;height:auto;padding:50px 50px 80px;text-align:center}.carousel-indicators{bottom:30px}.carousel-content{color:#000;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.carousel-indicators .active{background-color:#999}.contact-form{overflow:hidden}.form-control{border-radius:0;font-size:1em}.form-control:focus{border-color:#999;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(153,153,153,.45);box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(153,153,153,.45)}.form-group{margin-bottom:20px}.form-group-2-col-left{padding-left:0;padding-right:5px}.form-group-2-col-right{padding-right:0;padding-left:5px}.submit-btn{border-radius:0;background:0 0;border:1px solid #999;color:#999;float:right;font-size:1.4em;font-weight:300;padding:15px 60px;-webkit-transition:all .3s ease;transition:all .3s ease}.submit-btn:active,.submit-btn:active:focus,.submit-btn:active:hover,.submit-btn:focus,.submit-btn:hover,.submit-btn:visited{background:#999;border:1px solid #999;color:#fff}.tm-footer{color:#666;padding-bottom:15px}
+
+@media print {
+    /* task_1 */
+    #about,
+    .tm-sidebar,
+    section:nth-child(3),
+    section:nth-child(4),
+    section:nth-child(5),
+    section:nth-child(6) {
+        display: none;
+    }
+    .tm-main-content {
+        display: block;
+        width: 100%;
+        margin: auto;
+        padding: 0;
+    }
+    .tm-banner-inner {
+        height: 70%;
+    }
+    .flex-2-col {
+        display: block;
+        margin-top: -17%;
+    }
+    .flex-2-col h2 {
+        color: #0000ff;
+    }
+    .flex-2-col p {
+        width: 140%;
+    }
+    .tm-team-description-container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .flex-item {
+        padding-top: 0;
+    }
+    .flex-item img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen {
+    /* task_2 */
+    #about .box:not(:nth-child(3n+1)) {
+        border-left: none !important;
+    }
+    #about .box:nth-child(-n+6) {
+        border-bottom: none !important;
+    }
+    /* task_3 */
+    p:first-letter {
+        color: #76cdd7;
+        font-size: 30px;
+    }
+    /* task_4 */
+    nav,
+    section {
+        -webkit-box-shadow: 0px 0px 0px 3px rgba(138, 138, 138, 0.7);
+        box-shadow: 0px 0px 0px 3px rgba(138, 138, 138, 0.7);
+        border-radius: 2px;
+    }
+    /* task_5 */
+    .gallery-container a img {
+        border: 2px solid silver;
+    }
+    /* task_6 */
+    .active h2 {
+        color: gainsboro;
+        letter-spacing: 5px;
+    }
+    /* task_7 */
+    h2+p {
+        font-style: italic;
+    }
+    /* task_8 */
+    .flex-item p {
+        line-height: 2em;
+    }
+    .flex-item p:first-letter {
+        margin-left: 25px;
+    }
+    /* task_9 */
+    .heading a {
+        color: black;
+    }
+    .heading .text::after {
+        content: "New";
+        color: red;
+        vertical-align: super;
+        font-size: 0.5em;
+        -webkit-text-decoration-line: none;
+        text-decoration-line: none;
+    }
+    .heading a:visited {
+        color: silver;
+    }
+    .heading a:hover {
+        color: #76cdd7;
+    }
+    .heading h2 {
+        color: #76cdd7;
+        text-align: center;
+    }
+    /* task_10 */
+    .blocks .boxes li:nth-child(odd) {
+        background-color: rgb(242, 242, 242);
+    }
+    /* task_11 */
+    .tm-main-nav li:not(:last-child) {
+        border-bottom: 1px solid silver;
+    }
+    /* task_12  */
+    button,
+    textarea,
+    input[type=text] {
+        color: red !important;
+    }
+}
