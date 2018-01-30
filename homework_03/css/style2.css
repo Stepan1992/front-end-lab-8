@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #c6eefc87; }
+
+#content {
+  width: 70%;
+  background-color: #3b3b3b;
+  padding: 1px 20px 1px 20px;
+  margin: 5px auto 5px auto;
+  color: #ffffff; }
+  #content h1 {
+    text-align: center; }
+  #content h1,
+  #content h2 {
+    color: #fccd10; }
+  #content h2:nth-of-type(4) {
+    margin-top: 45px; }
+  #content img {
+    border: 2px solid #fccd10;
+    float: left;
+    padding: 2px;
+    margin-right: 15px;
+    margin-bottom: 15px; }
+  #content a {
+    color: #f5c70f; }
+  #content .img-right {
+    float: right;
+    margin: 0 0 5px 15px; }
+  #content .brief {
+    background-color: #fde275;
+    width: 96%;
+    float: none;
+    color: #000000;
+    margin: 0 15px 15px 0;
+    padding: 20px; }
+  #content table {
+    width: 95%;
+    border-collapse: collapse;
+    background-color: #677d01; }
+    #content table caption {
+      text-align: right;
+      color: #000000; }
+    #content table tr:not(:nth-of-type(1)) {
+      border-bottom: 1px solid #e0e0e0; }
+    #content table tr th {
+      background-color: #94a34e;
+      padding: 8px 20px;
+      font-weight: normal;
+      font-size: 17px;
+      text-transform: uppercase;
+      text-align: left;
+      color: #000000; }
+      #content table tr th:not(:nth-last-child(1)) {
+        border-right: 1px solid #e0e0e0; }
+    #content table tr td {
+      padding: 9px 20px;
+      font-size: 15px; }
+  #content div h2:last-of-type {
+    margin-bottom: 0; }
+  #content div form input,
+  #content div form textarea {
+    width: 100%;
+    padding: 3px 2px; }
+  #content div form p {
+    padding: 0;
+    margin-bottom: 5px;
+    color: #f5c70f; }
+  #content div form .input-name {
+    width: 49%;
+    float: left;
+    margin-bottom: 15px; }
+  #content div form .input-surname {
+    width: 49%;
+    float: right;
+    margin-bottom: 15px; }
+  #content div form input[type=submit] {
+    background-color: #3b3b3b;
+    margin: 15px 0 25px 0;
+    border: 1px solid #f5c70f;
+    color: #f5c70f;
+    width: auto;
+    font-size: 20px;
+    padding: 8px 50px; }
