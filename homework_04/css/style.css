@@ -1,0 +1,409 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+}
+
+.header-wrap,
+.main-wrap,
+.article-wrapp,
+.footer-wrap {
+    width: 75%;
+    margin: auto;
+    min-width: 900px;
+}
+
+.wrapper header {
+    height: 580px;
+    background-image: url(../img/apples.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 35px;
+}
+
+.navigation,
+h1 {
+    color: #FFF;
+}
+
+.logo span {
+    font-size: 0.8em;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 0.8em;
+}
+
+.navigation nav ul li {
+    padding: 0 10px 10px 10px;
+    margin-right: 30px;
+}
+
+.navigation nav ul li:hover {
+    border-bottom: 2px solid #B7C8D9;
+    padding-bottom: 8px;
+}
+
+.brand {
+    width: auto;
+    margin: auto;
+    text-align: center;
+    margin-top: 170px;
+}
+
+.brand h1 {
+    font-weight: lighter;
+    letter-spacing: 10px;
+    font-size: 2.4em;
+}
+
+.brand h1::after {
+    content: 'TM';
+    vertical-align: super;
+    letter-spacing: normal;
+    font-size: 0.4em;
+}
+
+.brand h1 span {
+    font-size: 2em;
+    font-family: "Open Sans";
+}
+
+.brand p {
+    color: #FFF;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    padding-top: 5px;
+}
+
+.read-more {
+    border: 2px solid #FFF;
+    margin: auto;
+    width: 210px;
+    color: #F0F0F0;
+    font-size: 0.9em;
+    margin-top: 150px;
+    padding: 15px 0 15px;
+    background-color: #000;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.article {
+    background-color: #FFF;
+    height: 260px;
+}
+
+.articles {
+    height: 260px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article-left {
+    width: 40%;
+    height: auto;
+    font-size: 1.3em;
+    line-height: 30px;
+}
+
+.article-right {
+    margin-top: 15px;
+    width: 50%;
+    height: auto;
+    font-size: 0.8em;
+    line-height: 18px;
+    text-align: justify;
+}
+
+main {
+    height: 1000px;
+    background-color: #F3F3F3;
+}
+
+.main-header {
+    padding-top: 100px;
+    width: fit-content;
+    margin: auto;
+}
+
+.main-header h2 {
+    color: #000;
+    font-size: 1.3em;
+    font-weight: normal;
+}
+
+.gallery-wrapper {
+    display: flex;
+    height: 490px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.box {
+    height: 235px;
+}
+
+.box-1,
+.box-4 {
+    width: 66%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box-2,
+.box-3 {
+    width: 32%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box-1 {
+    background-image: url(../img/sample.jpg);
+}
+
+.box-2 {
+    background-image: url(../img/sample2.jpg);
+}
+
+.box-3 {
+    background-image: url(../img/sample2.jpg);
+}
+
+.box-4 {
+    background-image: url(../img/sample3.jpg);
+}
+
+.likes {
+    background-color: #343638;
+    width: 55px;
+    height: 23px;
+    color: #FFF;
+    font-size: 0.8em;
+    border: 2px solid #FFF;
+    opacity: 0.8;
+    text-align: center;
+    padding-top: 6px;
+    margin-top: 15px;
+    margin-left: 78%;
+}
+
+.first,
+.last {
+    margin-left: 89%;
+}
+
+.gradient {
+    height: 60px;
+    margin-top: 127px;
+    background: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(52, 54, 56, 0.98) 62%, rgba(52, 54, 56, 1) 100%);
+    opacity: 0.5;
+}
+
+.box p {
+    margin-top: -35px;
+    margin-left: 25px;
+    color: #FFF;
+    display: block;
+    position: absolute;
+    font-weight: bold;
+}
+
+.box p span {
+    color: #E8E8E8;
+    font-weight: normal;
+}
+
+.subscribe-box {
+    background-color: #FFF;
+    height: 170px;
+    margin-top: 70px;
+    display: flex;
+    padding: 0 70px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-label,
+.main-input-wrapper {
+    height: fit-content;
+}
+
+.input-label {
+    width: 35%;
+    font-size: 1.2em;
+}
+
+.main-input-wrapper {
+    width: 65%;
+}
+
+.main-input-wrapper input {
+    border: 1px solid #343638;
+    background-color: #F0F0F0;
+    width: 70%;
+    height: 40px;
+    padding-left: 15px;
+    font-weight: bold;
+    color: #343638;
+}
+
+.main-input-wrapper input::-webkit-input-placeholder {
+    color: #343638;
+    font-weight: bold;
+}
+
+.main-input-wrapper button {
+    background-color: #343638;
+    border: none;
+    height: 42px;
+    color: #E8E8E8;
+    width: 25%;
+    margin-left: -5px;
+    cursor: pointer;
+}
+
+footer {
+    height: 400px;
+    background-color: #FFF;
+}
+
+.footer-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 350px;
+}
+
+.brand-inform,
+.contact {
+    height: 150px;
+    width: 15%;
+}
+
+.tweet {
+    height: 150px;
+    width: 20%;
+}
+
+.newsletter {
+    height: 150px;
+    width: 25%;
+}
+
+.footer-area h3 {
+    font-size: 1em;
+    padding-bottom: 15px;
+}
+
+.brand-inform p,
+.contact p,
+.tweet q {
+    font-size: 0.7em;
+    line-height: 15px;
+    text-align: justify;
+    color: #9E9E9E;
+    font-weight: bolder;
+}
+
+.contact p {
+    line-height: 20px;
+}
+
+.tweet q {
+    font-style: italic;
+    text-align: justify;
+    padding-bottom: 25px;
+}
+
+.tweet p {
+    padding-top: 10px;
+    font-size: 0.7em;
+    color: #E8E8E8;
+}
+
+.newsletter p {
+    font-size: 0.8em;
+    color: #9E9E9E;
+    line-height: 20px;
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+.footer-input-wrapper input {
+    border-top: 1px solid #343638;
+    border-left: 1px solid #9E9E9E;
+    border-bottom: 1px solid #9E9E9E;
+    background-color: #F0F0F0;
+    width: 55%;
+    height: 33px;
+    padding-left: 15px;
+    font-weight: bold;
+    color: #343638;
+}
+
+.footer-input-wrapper input::-webkit-input-placeholder {
+    color: #A4A4A4;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.footer-input-wrapper button {
+    background-color: #343638;
+    border: none;
+    height: 35px;
+    color: #E8E8E8;
+    width: 36%;
+    margin-left: -4px;
+    cursor: pointer;
+}
+
+.footer-bottom-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #F3F3F3;
+    height: 60px;
+}
+
+.copyrights span {
+    color: #9E9E9E;
+    font-size: 0.8em;
+}
+
+.footer-nav ul li {
+    margin-left: 45px;
+}
+
+.footer-nav ul li a {
+    color: #000;
+    font-size: 0.7em;
+}
