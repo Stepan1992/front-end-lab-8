@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.logo {
+    text-align: center;
+    padding: 15px 0 10px;
+}
+
+.navigation ul {
+    background-color: #f5f5f5;
+}
+
+.navigation ul li {
+    border-top: 1px solid #cacaca;
+    height: 25px;
+    padding-top: 7px;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.banner {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.banner-content {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    right: 5%;
+    background-color: #39c2d7;
+    padding: 5px;
+}
+
+.banner-content p {
+    text-align: justify;
+    color: #fff;
+    font-size: 4vw;
+}
+
+.box {
+    width: 90%;
+    margin: auto;
+    background-color: #d8d8d8;
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: #39c2d7;
+}
+
+.box img {
+    max-width: 90%;
+    height: auto;
+}
+
+.box p,
+.box h2 {
+    text-align: justify;
+    padding: 5px 10px 0;
+    font-size: 3vw;
+}
+
+footer {
+    background-color: #39c2d7;
+}
+
+.footer-navigation {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-navigation ul li a {
+    color: #fff;
+    font-size: 3vw;
+}
+
+.footer-navigation ul li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.rights {
+    text-align: center;
+    color: #fff;
+    font-size: 3vw;
+    padding: 10px 0;
+}
+
+@media (min-width: 575px) {
+    nav ul {
+        list-style: none;
+    }
+    nav ul li {
+        display: inline-block;
+    }
+    nav ul li a {
+        display: block;
+        color: #FFF;
+        font-size: 0.8em;
+    }
+    .navigation {
+        text-align: center;
+        padding-bottom: 15px;
+    }
+    .navigation ul {
+        background-color: #fff;
+    }
+    .navigation ul li {
+        border-top: none;
+        margin-right: 10px;
+    }
+    .navigation ul li a {
+        border-top: none;
+    }
+    .navigation ul li a:hover {
+        color: #39c2d7;
+    }
+    .banner-content {
+        background-color: inherit;
+        top: 20px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        width: 55%;
+    }
+    .banner-content p {
+        font-size: 2.8vw;
+        text-align: center;
+    }
+    .news-conteiner {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        padding: 0 10px;
+    }
+    .box {
+        width: 48%;
+        height: 180px;
+        padding-bottom: 35px;
+    }
+    .box p,
+    .box h2 {
+        text-align: left;
+        padding: 5px 10px 0;
+    }
+    .box h2 {
+        font-size: 14px;
+    }
+    .box p {
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+    .box img {
+        width: 70%;
+    }
+    .footer-navigation ul li a,
+    .rights {
+        font-size: 1.6vw;
+        font-weight: bold;
+    }
+    .footer-navigation ul li {
+        padding-top: 10px;
+        margin-right: 20px;
+    }
+    .rights {
+        padding-bottom: 25px;
+    }
+}
+
+@media (min-width: 900px) {
+    .wrapper {
+        max-width: 1320px;
+        margin: auto;
+    }
+    .logo {
+        float: left;
+    }
+    .navigation ul {
+        padding-top: 23px;
+        text-align: left;
+        margin-left: 200px;
+    }
+    .navigation ul li a {
+        font-size: 16px;
+    }
+    .header-box,
+    .banner-content,
+    .news-conteiner,
+    .footer-conteiner {
+        width: 77%;
+        padding: 0 25px;
+        margin: auto;
+    }
+    .banner-content {
+        margin-left: 10%;
+        top: 70px;
+        width: 25%;
+    }
+    .banner-content p {
+        text-align: left;
+        font-size: 32px;
+    }
+    .box {
+        width: 31%;
+        height: 220px;
+        padding-bottom: 20px;
+    }
+    .box img {
+        width: 95%;
+    }
+    .box p,
+    .box h2 {
+        text-align: left;
+    }
+    .box h2 {
+        font-size: 17px;
+    }
+    .box p {
+        font-size: 14px;
+    }
+    .footer-conteiner {
+        display: flex;
+        align-items: center;
+    }
+    .footer-navigation ul li {
+        padding-top: 0;
+        margin-left: 10px;
+    }
+    .rights {
+        margin: 17px 0 0 10px;
+    }
+    .footer-navigation ul li a,
+    .rights {
+        font-size: 1.3vw;
+        font-weight: normal;
+    }
+}
