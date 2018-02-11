@@ -1,10 +1,10 @@
-var a = +prompt("Input first side of a triangle"),
+let a = +prompt("Input first side of a triangle"),
     b = +prompt("Input second side of a triangle"),
     c = +prompt("Input third side of a triangle");
 
 if (!isNaN(parseFloat(a)) && isFinite(a) && !isNaN(parseFloat(b)) && isFinite(b) && !isNaN(parseFloat(c)) && isFinite(c) && (a < b + c) && (b < a + c) && (c < a + b)) {
 
-    var p = (a + b + c) / 2,
+    let p = (a + b + c) / 2,
         square = Math.sqrt(p * (p - a) * (p - b) * (p - c));
 
     if (square != square.toFixed(2)) {
