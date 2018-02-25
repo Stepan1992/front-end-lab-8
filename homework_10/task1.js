@@ -1,9 +1,9 @@
 function debounce(callback, delay) {
 	let timer;
-	return function(...args) {
+	return function (...args) {
 		clearTimeout(timer);
-		timer = setTimeout(function() {
-      callback.apply(this, args);
+		timer = setTimeout(function () {
+			callback.apply(this, args);
 		}, delay);
 	};
 };
@@ -11,13 +11,13 @@ function debounce(callback, delay) {
 let iterator = 0;
 
 function increaseIteratorBy1() {
-  iterator++;
+	iterator++;
 
-  printIteratorValue();
+	printIteratorValue();
 }
 
 function printIteratorValue() {
-  console.log('Iterator value ', iterator);
+	console.log('Iterator value ', iterator);
 }
 
 var increaseIterator = debounce(increaseIteratorBy1, 1000);
@@ -30,4 +30,4 @@ increaseIterator();
 increaseIterator();
 increaseIterator();
 increaseIterator();
-increaseIterator(); 
+increaseIterator();
