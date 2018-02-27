@@ -1,6 +1,18 @@
-var rootNode = document.getElementById("root");
-
+let rootNode = document.getElementById("root");
 let list = document.createElement("ul");
+
+function addEvent(element) {
+    element.firstElementChild.addEventListener("click", function (event) {
+        if (getComputedStyle(this.nextElementSibling).display === "none") {
+            this.nextElementSibling.style.display = "block";
+            this.firstElementChild.innerHTML = "folder_open";
+        } else {
+            this.nextElementSibling.style.display = "none";
+            this.firstElementChild.innerHTML = "folder";
+        };
+        event.stopPropagation();
+    }, false);
+};
 
 function treeBuilder(array, list) {
     for (let i = 0; i < array.length; i++) {
@@ -21,19 +33,6 @@ function treeBuilder(array, list) {
         span.appendChild(textNode);
         li.appendChild(span);
         list.appendChild(li);
-
-        function addEvent(element){
-            element.firstElementChild.addEventListener("click", function (event) {
-                if (getComputedStyle(this.nextElementSibling).display === "none") {
-                    this.nextElementSibling.style.display = "block";
-                    this.firstElementChild.innerHTML = "folder_open";
-                } else {
-                    this.nextElementSibling.style.display = "none";
-                    this.firstElementChild.innerHTML = "folder";
-                };
-                event.stopPropagation();
-            }, false);
-        };
 
         if (array[i].folder && hasChildrenProperty && !array[i].children) {
             let span = document.createElement("span"),
