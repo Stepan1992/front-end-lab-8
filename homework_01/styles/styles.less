@@ -1,0 +1,57 @@
+@import "variables.less";
+@import "mixins.less";
+
+nav {
+    .active {
+        background-color: @blue;
+        .nav-link {
+            color: @white!important;
+        }              
+    }
+}
+
+main {
+    h1 {
+        .blue-header;
+    }
+    h3 {
+        color: @blue;
+    }
+}
+
+section {
+    h3 {
+        .blue-header;
+    }
+    .card {
+        border: none;
+        img {
+            border-radius: 0;
+        }
+        .card-title {
+            font-size: @fontSize;
+        }
+    }
+
+    .class-box-1 {
+        .colors-mixin(@red);
+    }
+    .class-box-2 {
+        .colors-mixin(@blue);
+    }
+    .class-box-3 {
+        .colors-mixin(@orange); 
+    }
+    .class-box-4 {
+        .colors-mixin(@green); 
+    }      
+}
+
+footer {
+    div {
+        background-color: @grey;
+    }
+    span {
+        font-size: @fontSize;
+    }
+}

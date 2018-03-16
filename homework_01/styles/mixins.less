@@ -1,0 +1,15 @@
+@import "variables.less";
+
+.blue-header {
+    color: @blue;
+    border-bottom: 1px solid @blue;
+}
+
+.colors-mixin(@color) {
+    img {
+        border: 1px solid @color;
+    }
+    .card-body {
+    background-color: @color;
+    } 
+}
