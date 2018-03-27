@@ -173,9 +173,3 @@ Monster.prototype.fury = function () {
         console.log(`${this.name} don't have enough hitpoints to use this skill`);
     };
 };
-
-
-//Task 2
-var hunter = new Champion({name: 'Rexxar', attack: 10, hitpoints: 60});
-var beast = new Monster({name: 'King Krush', attack: 8, hitpoints: 80});
-
