@@ -48,8 +48,8 @@ function validation(ipapiResponse) {
     });
 };
 
-function showModal(title, massage) {
+function showModal(title, message) {
     $('#modal .modal-title').text(title);
-    $('#modal-text').text(massage);
+    $('#modal-text').text(message);
     $('#modal').modal('show');
 };
