@@ -27,6 +27,7 @@ $('#track-btn').click(function () {
         $('#validate-btn').css('display', 'inline-block');
     }).catch(function (error) {
         $('#load-animation').css('display', 'none');
+        showModal('Error', 'Something went wrong. Try again!');
         console.error(error);
     });
 });
@@ -38,13 +39,17 @@ function validation(ipapiResponse) {
         http.post('https://shrouded-garden-94580.herokuapp.com/', ipapiResponse)
             .then(function (response) {
                 $('#validate-animation').css('display', 'none');
-                $('#modal-text').text(response);
-                $('#modal').modal('show');
+                showModal('Result of validating', response);
             }).catch(function (error) {
                 $('#validate-animation').css('display', 'none');
-                $('#modal-text').text('Something went wrong. Try again!');
-                $('#modal').modal('show');
+                showModal('Error', 'Something went wrong. Try again!');
                 console.error(error);
             });
     });
+};
+
+function showModal(title, massage) {
+    $('#modal .modal-title').text(title);
+    $('#modal-text').text(massage);
+    $('#modal').modal('show');
 };
