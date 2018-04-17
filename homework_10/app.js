@@ -28,28 +28,27 @@ class InputDecorator extends Input {
         };
     };
 
-    validating(flag, massage) {
+    validating(flag, message) {
         if (this.flag === false) {
-            if (massage) {
-                this.massage = `${this.massage}, ${massage}`;
+            if (message) {
+                this.message = `${this.message}, ${message}`;
             };
             return;
         };
         this.flag = flag;
 
         if(this.flag === true){
-            delete this.massage;
+            delete this.message;
         };
 
-
-        if (massage) {
-            this.massage = massage;
+        if (message) {
+            this.message = message;
         };
     };
 
     get valid() {
-        if (this.massage && !this.flag) {
-            return `${this.flag} ${this.massage}`;
+        if (this.message && !this.flag) {
+            return `${this.flag} ${this.message}`;
         };
         return `${this.flag} all validators pass`;
     };
@@ -94,7 +93,7 @@ class AddMaxLengthValidation extends InputDecorator {
     };
 };
 
-let numberInput = new NumberInput("Type numbers...");
+let numberInput = new NumberInput('Type numbers...');
 
 numberInput = new AddRequiredValidation(numberInput);
 console.log(numberInput.valid);
