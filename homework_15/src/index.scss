@@ -1,0 +1,62 @@
+@import './styles/fonts';
+@import './styles/colors';
+.color-container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .color-block {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 5px;
+        margin: 25px;
+        button {
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            border: none;
+            position: absolute;
+            top: 120px;
+            left: 10px;
+            font-size: 10px;
+            padding: 5px 15px;
+        }
+        .material-icons {
+            font-size: 12px;
+            position: absolute;
+            left: 3px;
+        }
+    }
+}
+
+.selected-colors {
+    height: 100px;
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .added-box {
+        height: 40px;
+        width: 40px;
+        margin: 10px;
+        border-radius: 5px;
+        position: relative;
+        button {
+            background-color: rgb(255, 32, 32);
+            border-radius: 50%;
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+        }
+        .material-icons {
+            font-size: 12px;
+            color: white;
+            position: absolute;
+            left: 2px;
+            bottom: 2px;
+        }
+    }
+}
