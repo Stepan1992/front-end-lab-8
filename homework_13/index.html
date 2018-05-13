@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    <script src="lib/angular.min.js"></script>
+    <script src="src/data.js"></script>
+    <script src="src/app.js"></script>
+</head>
+
+<body>
+    <div ng-controller="appCtrl" class="wrapper">
+        <div class="header">
+            <h1>MY BLOG</h1>
+        </div>
+        <div class="content">
+            <div class="posts">
+                <section>
+                    <div class="posts-container" ng-repeat="item in defaultPosts | filter:selectedCategory | filter:{title:symbolsInTitle}">
+                        <div class="post">
+                            <form name="editForm" ng-submit="savePost($index, editedTitle, editedDescription); showInp = false">
+                                <div class="post-image" style="background-image: url({{item.url}})">
+                                    <div>
+                                        <h2 ng-show="!showInp">{{item.title}}</h2>
+                                    </div>
+                                    <input type="text" ng-model="editedTitle" ng-show="showInp" ng-value="getTitleValue($index)" name="editTitle" required>
+                                    <span class="error-message" ng-show="editForm.editTitle.$invalid && editForm.editTitle.$touched">Enter title:</span>
+                                </div>
+                                <div class="categories">
+                                    <div class="category-item" ng-repeat="category in item.categories" ng-init="addCategoryToList(category)">
+                                        <span ng-click="searchByCategory(category)">{{category}}</span>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <p ng-show="!showInp">{{item.description}}</p>
+                                    <textarea ng-model="editedDescription" ng-show="showInp" ng-value="getDescription($index)" name="editDescription" required></textarea>
+                                    <span class="error-message" ng-show="editForm.editDescription.$invalid && editForm.editDescription.$touched">Fill the field</span>
+                                </div>
+                                <input type="button" ng-click="showInp = true" ng-show="!showInp" value="edit" class="edit-buttons">
+                                <input type="submit" value="save" ng-show="showInp" class="edit-buttons">
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="form-container" ng-show="showAddForm">
+                        <form name="addPostForm" ng-submit="addNewPost(addPostForm.$valid)" novalidate>
+                            <div class="form-item-wrap">
+                                <div>
+                                    <label for="form-title">Title</label>
+
+                                </div>
+                                <div>
+                                    <span class="error-message" ng-show="addPostForm.title.$invalid && addPostForm.$submitted">Enter title</span>
+                                    <input type="text" placeholder="Title..." id="form-title" name="title" ng-model="newPostTitle" required>
+                                </div>
+                            </div>
+                            <div class="form-item-wrap">
+                                <div>
+                                    <label for="form-categories">Categories</label>
+                                </div>
+                                <div>
+                                    <span class="error-message" ng-show="addPostForm.categories.$invalid && addPostForm.$submitted">Enter categoty</span>
+                                    <input type="text" placeholder="Categories..." id="form-categories" ng-model="newPostCategories" name="categories" required>
+                                </div>
+                            </div>
+                            <div class="form-item-wrap">
+                                <div>
+                                    <label for="text-description">Description</label>
+                                </div>
+                                <div>
+                                    <span class="error-message" ng-show="addPostForm.description.$invalid && addPostForm.$submitted">Describe the post</span>
+                                    <textarea id="text-description" placeholder="Categories..." ng-model="newPostDescription" name="description" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-item-wrap">
+                                <div>
+                                    <label for="photo-name">Photo</label>
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="File name..." id="photo-name" ng-model="newPostUrl" name="photo">
+                                </div>
+                            </div>
+                            <div class="add-post-wrap">
+                                <input type="submit" value="add" class="add-post-btn">
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <input type="button" value="Add Post" ng-click="showAddFormFunc()" ng-show="showAddPost" class="add-post-btn">
+            </div>
+            <aside>
+                <div class="sidebar">
+                    <div class="categories-list">
+                        <span>Categories</span>
+                        <ul>
+                            <li ng-repeat="item in categoriesList" ng-click="searchByCategory(item)">
+                                <span>{{item}}</span>
+                            </li>
+                        </ul>
+                        <span>Search by title</span>
+                        <input type="text" placeholder="blog title..." ng-model="symbolsInTitle" ng-change="searchSelectedCategory()">
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+</body>
+
+</html>
