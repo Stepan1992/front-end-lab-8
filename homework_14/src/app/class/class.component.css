@@ -1,0 +1,23 @@
+.id {
+  width: 12%;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.date,
+.lecturer,
+.action,
+.topic {
+  width: 22%;
+  border: 1px solid black;
+  text-align: center;
+  border-left: none;
+}
+
+.table-context {
+  display: flex;
+}
+
+input {
+  width: 90%;
+}

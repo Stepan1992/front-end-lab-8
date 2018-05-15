@@ -1,0 +1,31 @@
+.container {
+  width: 600px;
+  height: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.table-header {
+  display: flex;
+}
+
+.id {
+  width: 12%;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.date,
+.lecturer,
+.action,
+.topic {
+  width: 22%;
+  border: 1px solid black;
+  text-align: center;
+  border-left: none;
+}

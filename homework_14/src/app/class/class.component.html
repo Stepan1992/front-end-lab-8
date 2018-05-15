@@ -1,0 +1,28 @@
+<div class="table-context">
+  <div class="id">
+    {{i+1}}
+  </div>
+  <div class="topic">
+    <div *ngIf="!editing">{{lesson.topic}}</div>
+    <input type="text" [(ngModel)]="lesson.topic" *ngIf="editing">
+  </div>
+  <div class="date">
+    <div *ngIf="!editing">{{lesson.date}}</div>
+    <input type="text" [(ngModel)]="lesson.date" *ngIf="editing">
+  </div>
+  <div class="lecturer">
+    <div *ngIf="!editing">{{lesson.lecturer}}</div>
+    <input type="text" [(ngModel)]="lesson.lecturer" *ngIf="editing">
+  </div>
+  <div class="action">
+    <div *ngIf="!editing">
+      <button (click)="remove(lesson.id)">Remove</button>
+      <button (click)="edit()">Edit</button>
+    </div>
+    <div *ngIf="editing">
+      <button (click)="save()">Save</button>
+      <button (click)="discard()">Discard</button>
+    </div>
+    <div class="inputs"></div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="header">
+    <h1>Epam FE Lab #8</h1>
+    <button (click)="addLesson()">Add</button>
+  </div>
+  <div class="table">
+    <div class="table-header">
+      <div class="id">
+        <p>#</p>
+      </div>
+      <div class="topic">
+        <p>Topic</p>
+      </div>
+      <div class="date">
+        <p>Date</p>
+      </div>
+      <div class="lecturer">
+        <p>Lecturer</p>
+      </div>
+      <div class="action">
+        <p>Action</p>
+      </div>
+    </div>
+    <div *ngFor="let lesson of lessons; let i = index">
+      <app-class [lesson]="lesson" [i]="i" (removeFlag)="removeLesson($event)"></app-class>
+    </div>
+  </div>
+</div>
